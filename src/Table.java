@@ -1,6 +1,5 @@
 import java.util.Random;
 public class Table {
-        // Metoda do wypełniania tablicy losowymi liczbami
         public static int[] fillArray(int size, int min, int max) {
             Random random = new Random();
             int[] array = new int[size];
@@ -10,14 +9,13 @@ public class Table {
             return array;
         }
 
-        // Metoda do wyszukiwania elementu w tablicy
         public static int searchElement(int[] array, int value) {
             for (int i = 0; i < array.length; i++) {
                 if (array[i] == value) {
                     return i;
                 }
             }
-            return -1; // Element nie został znaleziony
+            return -1;
         }
 }
 
