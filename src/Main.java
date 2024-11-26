@@ -9,6 +9,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Podaj liczbę (całkowitą) do wyszukania w tablicy: ");
         int valueToFind;
+
         try {
             valueToFind = scanner.nextInt();
         } catch (Exception e) {
