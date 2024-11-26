@@ -2,13 +2,12 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Program do wyszukiwania pierwszego wystąpienia liczby w tablicy.\n");
 
         int[] array = Table.fillArray(50, 1, 100);
-        System.out.println("Tablica została wypełniona losowymi liczbami.\n");
+        System.out.println("Wypełniono tablice losowymi liczbami.\n");
 
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Podaj liczbę całkowitą do wyszukania w tablicy: ");
+        System.out.print("Podaj liczbę (całkowitą) do wyszukania w tablicy: ");
         int valueToFind;
         try {
             valueToFind = scanner.nextInt();
