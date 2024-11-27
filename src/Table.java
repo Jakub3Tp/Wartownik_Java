@@ -4,17 +4,17 @@ public class Table {
 
     public Table(int size, int min, int max) {
         this.n = new int[size];
-        FillIt(min, max);
+        fillIt(min, max);
     }
 
-    private void FillIt(int min, int max) {
+    private void fillIt(int min, int max) {
         Random random = new Random();
         for (int i = 0; i < n.length; i++) {
             n[i] = random.nextInt(max - min + 1) + min;
         }
     }
 
-    public static int Search(int value) {
+    public static int search(int value) {
         for (int i = 0; i < n.length; i++) {
             if (n[i] == value) {
                 return i;

@@ -6,16 +6,16 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Podaj liczbę (całkowitą) do wyszukania w tablicy: ");
-        int Find;
+        int find;
         try {
-            Find = scanner.nextInt();
+            find = scanner.nextInt();
         } catch (Exception e) {
             System.out.println("Wprowadzono nieprawidłową wartość. Uruchom program ponownie.");
             scanner.close();
             return;
         }
 
-        int index = Table.Search(Find);
+        int index = Table.search(find);
 
         int[] n = Table.getN();
         for (int i = 0; i < n.length; i++) {
@@ -23,9 +23,9 @@ public class Main {
         }
 
         if (index != -1) {
-            System.out.println("\nLiczba " + Find + " została znaleziona na indeksie: " + index);
+            System.out.println("\nLiczba " + find + " została znaleziona na indeksie: " + index);
         } else {
-            System.out.println("\nLiczba " + Find + " nie została znaleziona w tablicy.");
+            System.out.println("\nLiczba " + find + " nie została znaleziona w tablicy.");
         }
 
         scanner.close();
