@@ -2,33 +2,30 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
-        int[] array = Table.fillArray(50, 1, 100);
-        System.out.println("Wypełniono tablice losowymi liczbami.");
+        Table table = new Table(50, 1, 100);
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Podaj liczbę (całkowitą) do wyszukania w tablicy: ");
-        int valueToFind;
-
+        int Find;
         try {
-            valueToFind = scanner.nextInt();
+            Find = scanner.nextInt();
         } catch (Exception e) {
             System.out.println("Wprowadzono nieprawidłową wartość. Uruchom program ponownie.");
             scanner.close();
             return;
         }
 
-        int index = Table.searchElement(array, valueToFind);
+        int index = Table.Search(Find);
 
-        System.out.println("Zawartość tablicy:");
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + (i < array.length - 1 ? ", " : ""));
+        int[] n = Table.getN();
+        for (int i = 0; i < n.length; i++) {
+            System.out.print(n[i] + (i < n.length - 1 ? ", " : ""));
         }
 
         if (index != -1) {
-            System.out.println("\nLiczba " + valueToFind + " została znaleziona na indeksie: " + index);
+            System.out.println("\nLiczba " + Find + " została znaleziona na indeksie: " + index);
         } else {
-            System.out.println("\nLiczba " + valueToFind + " nie została znaleziona w tablicy.");
+            System.out.println("\nLiczba " + Find + " nie została znaleziona w tablicy.");
         }
 
         scanner.close();
